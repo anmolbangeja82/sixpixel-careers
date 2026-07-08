@@ -64,7 +64,7 @@ exports.handler = async (event) => {
       parent: { database_id: DATABASE_ID },
       properties: {
         "Name": { title: [{ text: { content: entry.name } }] },
-        "Role": { rich_text: [{ text: { content: entry.role } }] },
+        "Role": { select: { name: entry.role } },
         "Email": { email: entry.email },
         "Phone": { phone_number: entry.phone },
         "Portfolio Link": { url: entry.portfolio },
